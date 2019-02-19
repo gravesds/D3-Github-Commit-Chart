@@ -40,7 +40,7 @@ d3.csv("http://localhost:8000/commits.csv", function(d,i) {
         rollup_data = update_data(chart_data);
 
         xScale.domain([d3.min(data, xValue), d3.max(data, xValue)]);
-        yScale.domain([0, d3.max(data, yValue)+20]);
+        yScale.domain([-0.5, d3.max(data, yValue)+20]);
 
     svg.selectAll('.dot')
         .data(data).enter().append('circle')
